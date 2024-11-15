@@ -31,9 +31,23 @@ h3{
 
 p{
   font-family: "Work Sans";
-  font-weight: weight;
+  font-weight: 16px;
   font-style: thin;
   grid-template-columns: repeat(auto-fit);
+}
+
+.phraseaccroche{
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  grid-column: 1/-1;
+}
+
+.phraseaccroche h2{
+  font-family: "Unbounded";
+  font-weight: lighter;
+  font-size: 40px;;
 }
 
 .header{
@@ -49,6 +63,12 @@ p{
     padding: 5px;
 }
 
+.logo{
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap:10px;
+  align-items: center;
+}
 .header-title{
     background: rgb(245, 237, 220);
 }
@@ -87,7 +107,7 @@ p{
     display: grid;
     max-width: 1500px;
     margin: 0 auto;
-    grid-template-columns: minmax(1fr 1fr);
+    /* grid-template-columns: minmax(320px 1fr); */
     justify-content: center;
     column-gap: 10px;
     row-gap: 30px;
@@ -137,9 +157,11 @@ p{
     opacity:1;
   }
 
-.projetlarge{
-    grid-column: span 2;
-}
+  @media (min-width:768px){
+    .projetlarge{
+      grid-column: span 2;
+    }
+  }
 
 .filet{
     border: 0.5px solid black
