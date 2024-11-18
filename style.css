@@ -1,10 +1,22 @@
 body{
-    background: rgb(240, 236, 226);
+    background: rgb(245, 243, 238);
     font-family: "Unbounded";
     font-optical-sizing: auto;
+    margin: 30px;
     cursor: url("img/curseur/curseur.png"), pointer;
 }
 
+.logo{
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap:10px;
+  align-items: center;
+}
+
+
+a{
+  color:currentColor;
+}
 img{
   max-width: 100%;
   height: auto;
@@ -20,7 +32,7 @@ h1{
 
 h2{
     color: rgb(0, 0, 0);
-    font-size: 60px;
+    font-size: 35px;
     margin-bottom: -35px;
 }
 
@@ -29,12 +41,17 @@ h3{
     font-size: 10px;
 }
 
+p:first-of-type {
+  font-family: "Work Sans";
+  font-weight: bold;
+}
+
 p{
   font-family: "Work Sans";
-  font-weight: 16px;
-  font-style: thin;
-  grid-template-columns: repeat(auto-fit);
+  font-weight: thin;
 }
+
+
 
 .phraseaccroche{
   display: flex;
@@ -47,30 +64,30 @@ p{
 .phraseaccroche h2{
   font-family: "Unbounded";
   font-weight: lighter;
-  font-size: 40px;;
+  font-size: 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .header{
-    background:rgb(240, 236, 226);
+    background:rgb(245, 243, 238);
     display: grid;
     position: sticky;
     top: 0%;
     grid-template-columns: max-content max-content;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     border-bottom: 1px solid black;
     padding: 5px;
 }
 
-.logo{
-  display: grid;
-  grid-template-columns: max-content max-content;
-  gap:10px;
-  align-items: center;
+.filet{
+  border: 0.5px solid black
 }
+
 .header-title{
-    background: rgb(245, 237, 220);
+    background: rgb(245, 243, 238);
 }
 
 .header-nav{
@@ -86,7 +103,8 @@ p{
 .nav{
   display: grid;
   grid-auto-flow: column;
-  gap:24px;
+  gap:4px;
+  align-items: center;
 }
 
 .nav a{
@@ -102,6 +120,18 @@ p{
   background-color: black;
 }
 
+.item::before{
+  content:"";
+  width: 100px;
+  height: 100px;
+  background: url(img/logo/logoAJ.svg);
+  background-size: 100% 100%;
+  display: inline-block;
+  position: absolute;
+  bottom:-50px;
+  z-index: 9999;
+}
+
 
 .index .grid{
     display: grid;
@@ -114,17 +144,32 @@ p{
     align-items: center;
 }
 
-@media (min-width: 768px){
+.footer {
+  font-size: 12px;
+  margin-top: 80px;
+  /* margin-bottom: 30px; */
+  /* margin-left:-8px;
+  margin-right: -8px; */
+  text-align: center;
+  cursor: url(cursor.png)0 0, pointer;
+  background: #000;
+  color:#fff;
+  padding: 20px;
+}
+
+
+@media (min-width: 640px){
   .index .grid {
   grid-template-columns: repeat(2, minmax(320px,1fr));
   font-size: 14px;
   }
+
 }
 
 @media (min-width: 1280px){
   .index .grid {
   grid-template-columns:repeat(2, minmax(320px,1fr));
-  font-size: 25px;
+  font-size: 16px;
   }
 }
 
@@ -135,6 +180,7 @@ p{
     background: #000;
     text-decoration: none;
     justify-content: center;
+    position: relative;
   
   }
   
@@ -157,12 +203,22 @@ p{
     opacity:1;
   }
 
-  @media (min-width:768px){
+  @media (min-width:640px){
     .projetlarge{
       grid-column: span 2;
     }
   }
 
-.filet{
-    border: 0.5px solid black
+
+section{
+  margin-bottom: 50px;
+}
+
+.arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: black;
+  z-index: 1000;
 }
