@@ -13,10 +13,41 @@ body{
   align-items: center;
 }
 
-
 a{
   color:currentColor;
 }
+
+.marquee {
+  width: 100%;
+  overflow: hidden;   /* Cache le texte qui dépasse */
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;    /* Positionne le texte défilant plus bas que le h1 */
+  padding-bottom: 60px; /* Ajoute de l'espace sous le texte défilant */
+}
+
+/* Style du texte défilant */
+.marquee.marquee>p {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 2rem;  /* Taille du texte défilant */
+  color: #000000;      /* Couleur du texte défilant */
+  font-family: "Unbounded";  /* Hérite de la même police que le h1 */
+  animation: scroll-text 10s linear infinite;  /* Animation constante de défilement */
+  margin: 0;
+  padding: 0;
+}
+
+/* Animation du texte défilant */
+@keyframes scroll-text {
+  0% {
+    transform: translateX(100%); /* Début du texte à droite */
+  }
+  100% {
+    transform: translateX(-100%); /* Fin du texte à gauche */
+  }
+}
+
 img{
   max-width: 100%;
   height: auto;
@@ -73,6 +104,7 @@ p{
     background:rgb(245, 243, 238);
     display: grid;
     position: sticky;
+    z-index: 999;
     top: 0%;
     grid-template-columns: max-content max-content;
     justify-content: space-between;
@@ -118,18 +150,6 @@ p{
 .nav .current {
   color: white;
   background-color: black;
-}
-
-.item::before{
-  content:"";
-  width: 100px;
-  height: 100px;
-  background: url(img/logo/logoAJ.svg);
-  background-size: 100% 100%;
-  display: inline-block;
-  position: absolute;
-  bottom:-50px;
-  z-index: 9999;
 }
 
 
