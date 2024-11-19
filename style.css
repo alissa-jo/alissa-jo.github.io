@@ -19,33 +19,41 @@ a{
 
 .marquee {
   width: 100%;
-  overflow: hidden;   /* Cache le texte qui dépasse */
+  overflow: hidden;
   display: flex;
   justify-content: center;
-  margin-top: 60px;    /* Positionne le texte défilant plus bas que le h1 */
-  padding-bottom: 60px; /* Ajoute de l'espace sous le texte défilant */
+  margin-top: 30px;
+  padding-bottom: 20px;
 }
 
 /* Style du texte défilant */
-.marquee.marquee>p {
+.marquee.marquee p {
   display: inline-block;
   white-space: nowrap;
-  font-size: 2rem;  /* Taille du texte défilant */
-  color: #000000;      /* Couleur du texte défilant */
-  font-family: "Unbounded";  /* Hérite de la même police que le h1 */
-  animation: scroll-text 10s linear infinite;  /* Animation constante de défilement */
+  font-size: 0,5rem;
+  color: #000000;
+  font-family: "Unbounded";
+  animation: scroll-text 15s linear infinite;
   margin: 0;
   padding: 0;
+  
+  /* Espacement par défaut entre les mots */
+  word-spacing: 80px; /* Ajuste la valeur selon tes préférences */
 }
 
 /* Animation du texte défilant */
 @keyframes scroll-text {
   0% {
-    transform: translateX(100%); /* Début du texte à droite */
+    transform: translateX(100%); /* Le texte commence à droite (hors de l'écran) */
   }
   100% {
-    transform: translateX(-100%); /* Fin du texte à gauche */
+    transform: translateX(-100%); /* Le texte défile jusqu'à sortir à gauche (hors de l'écran) */
   }
+}
+
+/* Pour les mots composés : ne pas les espacer */
+.marquee span {
+  white-space: nowrap; /* Empêche les mots composés d'être séparés */
 }
 
 img{
@@ -54,7 +62,7 @@ img{
 }
 
 h1{
-    color: rgb(0, 0, 0);
+    color: rgb(245, 243, 238);
     font-size: 20px;
     justify-self: center;
     
@@ -122,6 +130,7 @@ p{
     background: rgb(245, 243, 238);
 }
 
+
 .header-nav{
     color: white;
     background-color: black;
@@ -141,6 +150,7 @@ p{
 
 .nav a{
   text-decoration: none;
+  font-size: x-small;
   border: 1px solid black;
   padding: 10px;
   border-radius: 50px;
@@ -164,27 +174,14 @@ p{
     align-items: center;
 }
 
-.footer {
-  font-size: 12px;
-  margin-top: 80px;
-  /* margin-bottom: 30px; */
-  /* margin-left:-8px;
-  margin-right: -8px; */
-  text-align: center;
-  cursor: url(cursor.png)0 0, pointer;
-  background: #000;
-  color:#fff;
-  padding: 20px;
-}
-
 
 @media (min-width: 640px){
   .index .grid {
   grid-template-columns: repeat(2, minmax(320px,1fr));
   font-size: 14px;
   }
-
 }
+
 
 @media (min-width: 1280px){
   .index .grid {
@@ -234,11 +231,28 @@ section{
   margin-bottom: 50px;
 }
 
-.arrow {
-  position: fixed;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 20px;
-  color: black;
-  z-index: 1000;
+.footer {
+  font-size: 12px;
+  margin-top: 80px;
+  /* margin-bottom: 30px; */
+  /* margin-left:-8px;
+  margin-right: -8px; */
+  text-align: center;
+  cursor: url(cursor.png)0 0, pointer;
+  background: #000;
+  color:#fff;
+  padding: 20px;
+}
+
+.footer2 {
+  font-size: 12px;
+  margin-top: 80px;
+  /* margin-bottom: 30px; */
+  /* margin-left:-8px;
+  margin-right: -8px; */
+  text-align: center;
+  cursor: url(cursor.png)0 0, pointer;
+  background: rgb(245, 243, 238);
+  color:#000000;
+  padding: 20px;
 }
