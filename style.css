@@ -29,6 +29,7 @@ a{
   font-family: "Unbounded";
   color:#fff;
   font-size: 26px;
+  text-align: center;
 }
 
 .carousel-container img{
@@ -87,13 +88,7 @@ h1{
 h2{
     color: rgb(0, 0, 0);
     font-size: 35px;
-    margin-bottom: -35px;
-}
-
-h3{
-  color: rgb(255, 255, 255);
-  font-size: 35px;
-  margin-bottom: -35px;
+    margin-bottom: -43px;
 }
 
 h4{
