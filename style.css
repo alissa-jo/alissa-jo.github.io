@@ -2,8 +2,27 @@ body{
     background: rgb(245, 243, 238);
     font-family: "Unbounded";
     font-optical-sizing: auto;
-    margin: 30px;
-    cursor: url("img/curseur/curseur.png"), pointer;
+    margin: 10px;
+}
+
+@media (min-width: 640px){
+  .index .grid {
+  grid-template-columns: repeat(2, minmax(320px,1fr));
+  font-size: 14px;
+  }
+  body{
+    margin: 8px;
+}
+}
+
+@media (min-width: 1280px){
+  .index .grid {
+  grid-template-columns:repeat(2, minmax(320px,1fr));
+  font-size: 16px;
+  }
+  body{
+    margin: 34px;
+  }
 }
 
 .logo{
@@ -30,6 +49,7 @@ a{
   color:#fff;
   font-size: 26px;
   text-align: center;
+
 }
 
 .carousel-container img{
@@ -50,7 +70,7 @@ a{
 .carousel-track {
   width:fit-content;
   display: flex;
-  animation: scroll 25s linear infinite;
+  animation: scroll 15s linear infinite;
   /* transform: translateX(-50%); */
 
 }
@@ -87,7 +107,7 @@ h1{
 
 h2{
     color: rgb(0, 0, 0);
-    font-size: 35px;
+    font-size: 32px;
     margin-bottom: -43px;
 }
 
@@ -191,21 +211,6 @@ p{
 }
 
 
-@media (min-width: 640px){
-  .index .grid {
-  grid-template-columns: repeat(2, minmax(320px,1fr));
-  font-size: 14px;
-  }
-}
-
-
-@media (min-width: 1280px){
-  .index .grid {
-  grid-template-columns:repeat(2, minmax(320px,1fr));
-  font-size: 16px;
-  }
-}
-
 .item{
     display:grid;
     width: fit-content;
@@ -254,22 +259,8 @@ section{
   /* margin-left:-8px;
   margin-right: -8px; */
   text-align: center;
-  cursor: url(cursor.png)0 0, pointer;
   background: #000;
   color:#fff;
-  padding: 20px;
-}
-
-.footer2 {
-  font-size: 12px;
-  margin-top: 80px;
-  /* margin-bottom: 30px; */
-  /* margin-left:-8px;
-  margin-right: -8px; */
-  text-align: center;
-  cursor: url(cursor.png)0 0, pointer;
-  background: rgb(245, 243, 238);
-  color:#000000;
   padding: 20px;
 }
 
