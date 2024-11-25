@@ -55,6 +55,7 @@ a{
 .carousel-container img{
   height:300px;
   width:auto;
+  max-width:none; 
   display: block;
 }
 
@@ -70,7 +71,7 @@ a{
 .carousel-track {
   width:fit-content;
   display: flex;
-  animation: scroll 15s linear infinite;
+  animation: scroll 30s linear infinite;
   /* transform: translateX(-50%); */
 
 }
