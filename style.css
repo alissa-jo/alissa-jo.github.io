@@ -1,9 +1,96 @@
 body{
-    background: rgb(240, 236, 226);
+    background: rgb(245, 243, 238);
     font-family: "Unbounded";
     font-optical-sizing: auto;
-    cursor: url("img/curseur/curseur.png"), pointer;
+    margin: 10px;
 }
+
+@media (min-width: 640px){
+  .index .grid {
+  grid-template-columns: repeat(2, minmax(320px,1fr));
+  font-size: 14px;
+  }
+  body{
+    margin: 8px;
+}
+}
+
+@media (min-width: 1280px){
+  .index .grid {
+  grid-template-columns:repeat(2, minmax(320px,1fr));
+  font-size: 16px;
+  }
+  body{
+    margin: 34px;
+  }
+}
+
+.logo{
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap:10px;
+  align-items: center;
+}
+
+a{
+  color:currentColor;
+  text-decoration: none;
+}
+
+.carousel-text{
+  position: absolute;
+  width:100%;
+  display: grid;
+  height:300px;
+  align-content: center;
+  justify-content: center;
+  z-index: 999;
+  font-family: "Unbounded";
+  color:#fff;
+  font-size: 26px;
+  text-align: center;
+
+}
+
+.carousel-container img{
+  height:300px;
+  width:auto;
+  display: block;
+}
+
+
+.carousel-container {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.carousel-track {
+  width:fit-content;
+  display: flex;
+  animation: scroll 15s linear infinite;
+  /* transform: translateX(-50%); */
+
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation on hover */
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+
+
 
 img{
   max-width: 100%;
@@ -12,7 +99,7 @@ img{
 
 h1{
     color: rgb(0, 0, 0);
-    font-size: 20px;
+    font-size: 15px;
     justify-self: center;
     
 }
@@ -20,8 +107,8 @@ h1{
 
 h2{
     color: rgb(0, 0, 0);
-    font-size: 60px;
-    margin-bottom: -35px;
+    font-size: 32px;
+    margin-bottom: -38px;
 }
 
 h3{
@@ -29,12 +116,17 @@ h3{
     font-size: 10px;
 }
 
+p:first-of-type {
+  font-family: "Work Sans";
+  font-weight: bold;
+}
+
 p{
   font-family: "Work Sans";
-  font-weight: 16px;
-  font-style: thin;
-  grid-template-columns: repeat(auto-fit);
+  font-weight: thin;
 }
+
+
 
 .phraseaccroche{
   display: flex;
@@ -47,31 +139,34 @@ p{
 .phraseaccroche h2{
   font-family: "Unbounded";
   font-weight: lighter;
-  font-size: 40px;;
+  font-size: 50px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .header{
-    background:rgb(240, 236, 226);
+    background:rgb(245, 243, 238);
     display: grid;
     position: sticky;
+    z-index: 999;
     top: 0%;
     grid-template-columns: max-content max-content;
     justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 20px;
-    border-bottom: 1px solid black;
+    align-items: center;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgb(0, 0, 0);
     padding: 5px;
+    filter:grayscale(0)
 }
 
-.logo{
-  display: grid;
-  grid-template-columns: max-content max-content;
-  gap:10px;
-  align-items: center;
+.filet{
+  border: 0.5px solid rgb(245, 243, 238);
 }
+
 .header-title{
-    background: rgb(245, 237, 220);
+    background: rgb(245, 243, 238);
 }
+
 
 .header-nav{
     color: white;
@@ -86,11 +181,13 @@ p{
 .nav{
   display: grid;
   grid-auto-flow: column;
-  gap:24px;
+  gap:4px;
+  align-items: center;
 }
 
 .nav a{
   text-decoration: none;
+  font-size: x-small;
   border: 1px solid black;
   padding: 10px;
   border-radius: 50px;
@@ -102,6 +199,10 @@ p{
   background-color: black;
 }
 
+.nav .current {
+  color: white;
+  background-color: black;
+}
 
 .index .grid{
     display: grid;
@@ -114,19 +215,6 @@ p{
     align-items: center;
 }
 
-@media (min-width: 768px){
-  .index .grid {
-  grid-template-columns: repeat(2, minmax(320px,1fr));
-  font-size: 14px;
-  }
-}
-
-@media (min-width: 1280px){
-  .index .grid {
-  grid-template-columns:repeat(2, minmax(320px,1fr));
-  font-size: 25px;
-  }
-}
 
 .item{
     display:grid;
@@ -135,6 +223,7 @@ p{
     background: #000;
     text-decoration: none;
     justify-content: center;
+    position: relative;
   
   }
   
@@ -157,12 +246,37 @@ p{
     opacity:1;
   }
 
-  @media (min-width:768px){
+  @media (min-width:640px){
     .projetlarge{
       grid-column: span 2;
     }
   }
 
-.filet{
-    border: 0.5px solid black
+
+section{
+  margin-bottom: 50px;
+}
+
+.footer {
+  font-size: 12px;
+  margin-top: 80px;
+  /* margin-bottom: 30px; */
+  /* margin-left:-8px;
+  margin-right: -8px; */
+  text-align: center;
+  background: #000;
+  color:#fff;
+  padding: 20px;
+}
+
+.footer2 {
+  font-size: 12px;
+  margin-top: 80px;
+  /* margin-bottom: 30px; */
+  /* margin-left:-8px;
+  margin-right: -8px; */
+  text-align: center;
+  background: rgb(245, 243, 238);
+  color:#000000;
+  padding: 20px;
 }
