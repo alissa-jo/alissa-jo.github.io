@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>#weekoftype | Typographie</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="project">
+
+<header class="header">
+    <div class="logo">
+        <a href="index.html">
+            <img src="img_taille/logo/logoAJ.svg" width="30" height="30" alt="Logo Alissa Jock">
+        </a>
+    </div>
+    <nav class="nav">
+        <a href="#" id="apropos-btn">à propos</a>
+        <a href="#" id="sommaire-btn">sommaire</a>
+    </nav>
+</header>
+
+<!-- CARROUSEL FULL WIDTH -->
+<div class="carousel-container">
+    <div class="carousel-track">
+
+        <div class="carousel-item"><img src="img_taille/1day1font/1.jpg" alt=""></div>
+        <div class="carousel-item"><img src="img_taille/1day1font/2.jpg" alt=""></div>
+        <div class="carousel-item"><img src="img_taille/1day1font/3.jpg" alt=""></div>
+        <div class="carousel-item"><img src="img_taille/1day1font/4.jpg" alt=""></div>
+        <div class="carousel-item"><img src="img_taille/1day1font/5.jpg" alt=""></div>
+
+        <!-- duplication pour boucle fluide -->
+        <div class="carousel-item"><img src="img_taille/1day1font/1.jpg" alt=""></div>
+        <div class="carousel-item"><img src="img_taille/1day1font/2.jpg" alt=""></div>
+        <div class="carousel-item"><img src="img_taille/1day1font/3.jpg" alt=""></div>
+        <div class="carousel-item"><img src="img_taille/1day1font/4.jpg" alt=""></div>
+        <div class="carousel-item"><img src="img_taille/1day1font/5.jpg" alt=""></div>
+
+    </div>
+</div>
+
+
+<!-- CONTENU TEXTE EN GRILLE -->
+<section class="project-content">
+    <div class="project-text">
+        <h2 class="project-title">#weekoftype</h2>
+        <h3 class="project-subtitle">2026 | Typographie</h3>
+        <p class="project-notion">→ Discipline créative quotidienne</p>
+        <p class="project-description">
+            Inspiré du challenge #weekoftype, ce projet explore la typographie à travers la conception d’une lettre par jour. Pensé comme un protocole de recherche, il repose sur des contraintes quotidiennes (temps, style, lisibilité) afin d’interroger la forme, le rythme et la cohérence d’un système typographique. L’enjeu principal réside dans la régularité de production et la capacité d’itération.
+        </p>
+    </div>
+</section>
+
+
+<!-- PANNEAU SOMMAIRE -->
+<div class="sommaire-panel" id="sommaire-panel">
+    <div class="sommaire-close" id="sommaire-close">&times;</div>
+    <div class="sommaire-content">
+        <p>
+        TYPOGRAPHIE  - #WEEKOFTYPE<br>
+        PUBLICITÉS - TCHAOTCHAO<br>
+        IDENTITES - LA CAVERNE<br>
+        IDENTITES - WOODY<br>
+        EDITIONS - épochè<br>
+        EDITIONS - matérioh!<br>
+        AFFICHES - Type Director Club<br>
+        AFFICHES - The Movie<br>
+        HELLO EDITION<br>
+        BRANDING - Odyssée<br>
+        TECHNIQUES - Risographie, sérigraphie
+        </p>
+    </div>
+</div>
+
+
+<!-- PANNEAU À PROPOS -->
+<div class="apropos-panel" id="apropos-panel">
+    <div class="apropos-close" id="apropos-close">&times;</div>
+    <div class="apropos-content">
+        <div class="col col1">
+            <p>
+            Alissa JOCK, étudiante en 3e année de DNMADe Graphisme – Image de Communication à l’ELMAD Auguste Renoir à Paris.<br><br>
+            J’explore le design graphique à travers la direction de projets, le design de message, l’identité visuelle, l’édition et la création typographique. Motivée par le travail collectif, j’aime adapter mes idées à différents supports et contextes.<br><br>
+            Petit + : me confronter à des défis ambitieux pour évoluer et affiner ma pratique.
+            </p>
+        </div>
+        <div class="col col2">
+            <p>
+            <strong>FORMATIONS</strong><br>
+            &gt; 2023-2026 // DNMADe Graphisme - Image de Communication<br>
+            &gt; 2020-2023 // Baccalauréat Arts Appliqués<br><br>
+
+            <strong>EXPÉRIENCES RÉCENTES</strong><br>
+            &gt; 2025 // Graphiste-illustratrice – Hello Editions<br>
+            &gt; 2025 // Workshop Motion Design – After Effects<br>
+            &gt; 2024 // Workshop HTML CSS JAVASCRIPT – site portfolio codé
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<!-- SCRIPT PANNEAUX -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+
+    const somBtn = document.getElementById("sommaire-btn");
+    const somPanel = document.getElementById("sommaire-panel");
+    const somClose = document.getElementById("sommaire-close");
+
+    somBtn.addEventListener("click", function(e){
+        e.preventDefault();
+        somPanel.classList.toggle("active");
+    });
+
+    somClose.addEventListener("click", function(){
+        somPanel.classList.remove("active");
+    });
+
+    const aproposBtn = document.getElementById("apropos-btn");
+    const aproposPanel = document.getElementById("apropos-panel");
+    const aproposClose = document.getElementById("apropos-close");
+
+    aproposBtn.addEventListener("click", function(e){
+        e.preventDefault();
+        aproposPanel.classList.toggle("active");
+    });
+
+    aproposClose.addEventListener("click", function(){
+        aproposPanel.classList.remove("active");
+    });
+
+});
+</script>
+
+</body>
+</html>
