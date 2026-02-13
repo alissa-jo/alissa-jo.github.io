@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Woody | Logo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap" rel="stylesheet">   
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="project">
+
+<header class="header">
+    <div class="logo"><a href="index.html"><img src="img_taille/logo/logoAJ.svg" width="30" height="30" alt="Logo Alissa Jock"></a></div>
+    <nav class="nav">
+        <a href="#" id="apropos-btn">à propos</a>
+        <a href="#" id="sommaire-btn">sommaire</a>
+    </nav> 
+</header>
+
+    
+    <!-- Grille globale projet -->
+    <section class="project-content">
+
+         <div class="project-text">
+            <h2 class="project-title">Woody</h2>
+            <h3 class="project-subtitle">2025 | Logo-identité </h3></div>
+
+                <!-- Grande image qui prend les deux colonnes -->
+        <div class="project-image large">
+            <img src="img_taille/Woody/signal.png" alt="Van aménagé avec kit Tchao Tchao">
+        </div>
+
+        <!-- Grande image qui prend les deux colonnes -->
+        <div class="project-image large">
+            <img src="img_taille/Woody/exo2.png" alt="Van aménagé avec kit Tchao Tchao">
+        </div>
+
+                <!-- Grande image qui prend les deux colonnes -->
+        <div class="project-image large">
+            <img src="img_taille/Woody/2logo.png" alt="Van aménagé avec kit Tchao Tchao">
+        </div>
+
+                        <!-- Grande image qui prend les deux colonnes -->
+        <div class="project-image large">
+            <img src="img_taille/Woody/ensemblevintage.png" alt="Van aménagé avec kit Tchao Tchao">
+        </div>
+        
+                <!-- Texte projet sur 1 colonne (gauche) -->
+        <div class="project-text">
+            <p class="project-notion">→ Développer des logos en phase exploratoire</p>
+            <p class="project-description">
+                Dans le cadre d’un exercice de 5 heures, une série de logo a été développée pour Woody, une marque de jouets en bois. L’objectif n’est pas d’aboutir à une solution unique, mais d’être force de proposition : explorer plusieurs pistes de logos et de colorimétries, tester différents positionnements et univers graphiques, et démontrer une capacité à penser rapidement, avec cohérence et intention.
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- PANNEAU SOMMAIRE -->
+<div class="sommaire-panel" id="sommaire-panel">
+    <div class="sommaire-close" id="sommaire-close">&times;</div>
+    <div class="sommaire-content">
+        <p>
+        TYPOGRAPHIE  - #WEEKOFTYPE<br>
+        PUBLICITÉS - TCHAOTCHAO<br>
+        IDENTITES - LA CAVERNE<br>
+        IDENTITES - WOODY<br>
+        EDITIONS - épochè<br>
+        EDITIONS - matérioh!<br>
+        AFFICHES - Type Director Club<br>
+        AFFICHES - The Movie<br>
+        HELLO EDITION<br>
+        BRANDING - Odyssée<br>
+        TECHNIQUES - Risographie, sérigraphie
+        </p>
+    </div>
+</div>
+
+<!-- PANNEAU À PROPOS -->
+<div class="apropos-panel" id="apropos-panel">
+    <div class="apropos-close" id="apropos-close">&times;</div>
+    <div class="apropos-content">
+        <div class="col col1">
+            <p>
+            Alissa JOCK, une étudiante de 20 ans, en 3e année de DNMADe Graphisme – Image de Communication à l’ELMAD Auguste Renoir à Paris.<br><br>
+
+            J'admire le potentiel qu'offre le design graphique pour communiquer sur des sujets en tout genre. Dans le cadre de mes études, j'aborde la direction de projets graphiques au travers le design de message, l'identité visuelle, l'édition ou bien la création typographique. Je suis motivée par le travail en équipe et adore m'adapter à tous types de supports pour faire diverger mes idées !<br><br>
+
+            Petit + : J’aime me confronter à des défis ambitieux, car ils me permettent d’apprendre, d’évoluer et de me dépasser.
+            </p>
+        </div>
+        <div class="col col2">
+            <p>
+            <strong>FORMATIONS</strong><br>
+            &gt; 2023-2026 // DNMADe Graphisme - Image de Communication ELMAD Auguste Renoir (75018 Paris)<br>
+            &gt; 2020-2023 // Baccalauréat Art Appliqués (77126 Congis-sur-Thérouanne)<br><br>
+
+            <strong>EXPÉRIENCES récentes</strong><br>
+            &gt; 2025 // Stagiaire dans le pôle Direction Artistique en tant que graphiste-illustratrice chez Hello Editions (75019 Paris)<br>
+            &gt; 2025 // Workshop motion design, After Effects avec Melody DaFonseca<br>
+            &gt; 2024 // Workshop HTML CSS JAVASCRIPT Benoît Wimard avec un site web codé par mes soins retraçant mes anciens projets
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPT SOMMAIRE + À PROPOS -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // SOMMAIRE
+    const somBtn = document.getElementById("sommaire-btn");
+    const somPanel = document.getElementById("sommaire-panel");
+    const somClose = document.getElementById("sommaire-close");
+
+    somBtn.addEventListener("click", function(e){
+        e.preventDefault();
+        somPanel.classList.toggle("active");
+    });
+    somClose.addEventListener("click", function(){
+        somPanel.classList.remove("active");
+    });
+
+    // À PROPOS
+    const aproposBtn = document.getElementById("apropos-btn");
+    const aproposPanel = document.getElementById("apropos-panel");
+    const aproposClose = document.getElementById("apropos-close");
+
+    aproposBtn.addEventListener("click", function(e){
+        e.preventDefault();
+        aproposPanel.classList.toggle("active");
+    });
+    aproposClose.addEventListener("click", function(){
+        aproposPanel.classList.remove("active");
+    });
+});
+</script>
+</body>
+</html>
