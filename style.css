@@ -466,6 +466,121 @@ body.project .project-text .project-description {
     }
 }
 
+/* ----------------- PAGE À PROPOS ----------------- */
+body.apropos .project-content {
+    display: grid;
+    grid-template-columns: auto 1fr; /* 2 colonnes */
+    gap: 40px;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    align-items: start; /* aligne le haut des colonnes */
+}
+
+/* Colonne gauche : titre + mail + photo */
+body.apropos .about-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    max-width: 500px;
+}
+
+/* Titre plus light */
+body.apropos .about-left h2 {
+    font-size: 38px;
+    font-weight: 200;
+    margin: 0;
+    text-align: left;
+}
+
+/* Mail plus léger et collé au titre */
+body.apropos .about-left h3 {
+    font-size: 16px;
+    font-weight: 200;
+    margin: -5px 0 0 0;
+    text-align: left;
+}
+
+/* Photo plus grande */
+body.apropos .about-left .about-photo {
+    width: 100%;
+    max-width: 550px;
+    aspect-ratio: 1 / 1;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+body.apropos .about-left .about-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Colonne droite : texte descriptif à côté de la photo */
+body.apropos .about-right {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+    align-self: start; /* commence à la hauteur de la photo */
+    margin-top: calc(38px + 16px + 15px); 
+    /* titre (38px) + mail (16px) + gap (15px) = hauteur totale avant la photo */
+}
+
+/* Textes descriptifs */
+body.apropos .about-right .project-text,
+body.apropos .about-right .about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+body.apropos .about-right .project-description {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Liens CV / portfolio : noirs et gris après clic */
+body.apropos .about-right a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+body.apropos .about-right a:visited {
+    color: #555; /* gris après consultation */
+}
+
+body.apropos .about-right a:hover {
+    opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    body.apropos .project-content {
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    body.apropos .about-left,
+    body.apropos .about-right {
+        width: 100%;
+        max-width: 600px;
+        align-items: center;
+        text-align: center;
+        margin-top: 0; /* supprime la marge pour mobile */
+    }
+
+    body.apropos .about-left .about-photo {
+        max-width: 100%;
+    }
+}
+
+
+
 
 /* ----------------- FOOTER ----------------- */
 .footer {
