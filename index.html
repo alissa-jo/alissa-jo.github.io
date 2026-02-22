@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alissa Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="index">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="img_taille/logo/logoAJ.svg"
+            width="30"
+            height="30"
+            alt="Logo Alissa Jock"
+          />
+        </a>
+      </div>
+
+      <nav class="nav">
+        <a href="àpropos.html">à propos</a>
+        <a href="#" id="sommaire-btn">sommaire</a>
+      </nav>
+    </header>
+
+    <!-- PHRASE ACCROCHE -->
+    <div class="phrase-accroche">
+      <p>À chaque projet, son défi.</p>
+    </div>
+
+    <!-- PANNEAU SOMMAIRE -->
+    <div class="sommaire-panel" id="sommaire-panel">
+      <div class="sommaire-close" id="sommaire-close">&times;</div>
+
+      <nav class="sommaire-content">
+        <ul>
+          <li><a href="tdc.html">AFFICHE — Type Director Club</a></li>
+          <li><a href="tchaotchao.html">PUBLICITÉS — Tchaotchao</a></li>
+          <li><a href="lacaverne.html">IDENTITÉ — La Caverne</a></li>
+          <li><a href="epoche.html">ÉDITION — Épochè</a></li>
+          <li><a href="fanzine.html">RISOGRAPHIE (ÉDITION) — MC2S</a></li>
+          <li><a href="helloeditions.html">STAGE — Hello Éditions</a></li>
+          <li><a href="themovie.html">TYPOGRAPHIE — The Movie</a></li>
+          <li><a href="materioh.html">ÉDITION — Matérioh!</a></li>
+          <li><a href="workshop-ia.html">IA — Workshop IA</a></li>
+          <li><a href="woody.html">IDENTITÉ — Woody</a></li>
+          <li><a href="odyssee.html">BRANDING — Odyssée</a></li>
+          <li><a href="mémoire.html">MÉMOIRE — A nous les maths !</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- GRILLE PROJETS -->
+    <main class="main grid">
+      <a href="tdc.html" class="item">
+        <img src="img_taille/TDC/mockup.jpg" alt="Type Director Club" />
+        <p>Type Director Club</p>
+      </a>
+
+      <a href="tchaotchao.html" class="item">
+        <img src="img_taille/tchaotchao/mockup.jpg" alt="Tchaotchao" />
+        <p>Tchaotchao</p>
+      </a>
+
+      <a href="lacaverne.html" class="item">
+        <img src="img_taille/lacaverne/packag1.jpg" alt="La Caverne" />
+        <p>La Caverne</p>
+      </a>
+
+      <a href="themovie.html" class="item">
+        <img src="img_taille/themovie/glyphnoir.png" alt="Woody" />
+        <p>The Movie</p>
+      </a>
+
+      <a href="epoche.html" class="item">
+        <img src="img_taille/epoche/zoomtombe.jpg" alt="Épochè" />
+        <p>Épochè</p>
+      </a>
+
+      <a href="helloeditions.html" class="item">
+        <img
+          src="img_taille/helloeditions/elleprésent.png"
+          alt="Hello Éditions"
+        />
+        <p>Hello éditions</p>
+      </a>
+
+      <a href="fanzine.html" class="item">
+        <img src="img_taille/fanzine/fanzinezoom.jpg" alt="#weekoftype" />
+        <p>MC2S</p>
+      </a>
+
+      <a href="materioh.html" class="item">
+        <img
+          src="img_taille/matérioh/couverture-plastique.jpg"
+          alt="Matérioh!"
+        />
+        <p>Matérioh!</p>
+      </a>
+
+      <a href="woody.html" class="item">
+        <img src="img_taille/Woody/exo.png" alt="Woody" />
+        <p>Woody</p>
+      </a>
+
+      <a href="workshop-ia.html" class="item">
+        <img src="img_taille/workshopIA/martin1.png" alt="Workshop IA" />
+        <p>Initiation IA</p>
+      </a>
+
+      <a href="odyssee.html" class="item">
+        <img src="img_taille/odyssée/signalétique.png" alt="Odyssée" />
+        <p>Odyssée</p>
+      </a>
+
+      <a href="mémoire.html" class="item">
+        <img src="img_taille/mémoire/mémoire-panier.png" alt="Mémoire" />
+        <p>À nous les maths !</p>
+      </a>
+    </main>
+
+    <!-- SCRIPT SOMMAIRE -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const somBtn = document.getElementById("sommaire-btn");
+        const somPanel = document.getElementById("sommaire-panel");
+        const somClose = document.getElementById("sommaire-close");
+
+        somBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          somPanel.classList.toggle("active");
+        });
+
+        somClose.addEventListener("click", function () {
+          somPanel.classList.remove("active");
+        });
+      });
+    </script>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>
+        © Alissa Jock | Site codé à la main HTML-CSS | Typographie : Work Sans
+      </p>
+    </footer>
+
+    <!-- CURSEUR PERSONNALISÉ -->
+    <div class="custom-cursor" id="custom-cursor">
+      <span>VOIR</span>
+    </div>
+
+    <script>
+      const cursor = document.getElementById("custom-cursor");
+      const items = document.querySelectorAll(".main .item");
+
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.top = e.clientY + "px";
+        cursor.style.left = e.clientX + "px";
+      });
+
+      items.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+          cursor.style.opacity = "1";
+          cursor.style.transform = "translate(-50%, -50%) scale(1)";
+          document.body.style.cursor = "none";
+        });
+
+        item.addEventListener("mouseleave", () => {
+          cursor.style.opacity = "0";
+          cursor.style.transform = "translate(-50%, -50%) scale(0.5)";
+          document.body.style.cursor = "default";
+        });
+      });
+    </script>
+  </body>
+</html>
