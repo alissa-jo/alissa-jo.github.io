@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mémoire</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="project">
+    <!-- HEADER -->
+    <header class="header">
+      <div class="logo">
+        <a href="index.html">
+          <img
+            src="img_taille/logo/logoAJ.svg"
+            width="30"
+            height="30"
+            alt="Logo Alissa Jock"
+          />
+        </a>
+      </div>
+
+      <nav class="nav">
+        <a href="àpropos.html">à propos</a>
+        <a href="#" id="sommaire-btn">sommaire</a>
+      </nav>
+    </header>
+
+    <!-- CONTENU PROJET -->
+    <section class="project-content">
+      <div class="project-text">
+        <h2 class="project-title">À nous les maths !</h2>
+        <h3 class="project-subtitle">2025 | Édition - Mémoire</h3>
+      </div>
+
+      <div class="project-image large">
+        <img
+          src="img_taille/mémoire/2mémoire.jpg"
+          alt="Mockup Hello Éditions"
+        />
+      </div>
+
+      <div class="project-image large">
+        <img
+          src="img_taille/mémoire/sommaire.jpg"
+          alt="Mockup Hello Éditions"
+        />
+      </div>
+      <div class="project-image large">
+        <img src="img_taille/mémoire/pages.jpg" alt="Mockup Hello Éditions" />
+      </div>
+
+      <div class="project-text">
+        <p class="project-notion">→ Déconstruire la distance avec le savoir</p>
+        <p class="project-description">
+          À nous les maths est un mémoire qui questionne la perception
+          contemporaine des mathématiques, souvent vues comme élitistes,
+          abstraites et anxiogènes. Il explore comment le design graphique peut
+          transformer cette image en générant curiosité, inclusion et
+          familiarité. Le projet prend la forme d’une recherche critique
+          croisant sociologie de la culture, psychologie cognitive et théorie du
+          design, pour analyser comment les dispositifs graphiques construisent
+          ou déconstruisent la distance entre le public et les mathématiques. Il
+          met en lumière le potentiel du graphisme à faire des mathématiques un
+          espace partagé, accessible et sensible.
+        </p>
+      </div>
+    </section>
+
+    <!-- NAVIGATION ENTRE PROJETS -->
+    <div class="project-navigation">
+      <a href="themovie.html" class="project-nav prev">←</a>
+      <a href="odyssee.html" class="project-nav next">→</a>
+    </div>
+
+    <!-- PANNEAU SOMMAIRE -->
+    <div class="sommaire-panel" id="sommaire-panel">
+      <div class="sommaire-close" id="sommaire-close">&times;</div>
+
+      <nav class="sommaire-content">
+        <ul>
+          <li><a href="workshop-ia.html">IA | ÉDITION — Martin Parr</a></li>
+          <li><a href="tchaotchao.html">PUBLICITÉS — Tchaotchao</a></li>
+          <li><a href="lacaverne.html">IDENTITÉ — La Caverne</a></li>
+          <li><a href="fanzine.html">RISOGRAPHIE | ÉDITION — MC2S</a></li>
+          <li><a href="epoche.html">ÉDITION — Épochè</a></li>
+          <li><a href="tdc.html">AFFICHE — Type Director Club</a></li>
+          <li><a href="helloeditions.html">STAGE — Hello Éditions</a></li>
+          <li><a href="materioh.html">ÉDITION — Matérioh!</a></li>
+          <li><a href="woody.html">IDENTITÉ — Woody</a></li>
+          <li><a href="themovie.html">TYPOGRAPHIE — The Movie</a></li>
+          <li><a href="mémoire.html">MÉMOIRE — A nous les maths !</a></li>
+          <li><a href="odyssee.html">BRANDING — Odyssée</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- PANNEAU À PROPOS -->
+    <div class="apropos-panel" id="apropos-panel">
+      <div class="apropos-close" id="apropos-close">&times;</div>
+
+      <div class="apropos-content">
+        <div class="col col1">
+          <p>
+            Alissa JOCK, étudiante de 20 ans, en 3e année de DNMADe Graphisme –
+            Image de Communication à l’ELMAD Auguste Renoir à Paris.
+            <br /><br />
+            J'admire le potentiel qu'offre le design graphique pour communiquer
+            sur des sujets variés. Direction de projet, identité visuelle,
+            édition ou création typographique structurent ma pratique.
+            <br /><br />
+            Petit + : J’aime me confronter à des défis ambitieux, car ils me
+            permettent d’évoluer et de me dépasser.
+          </p>
+        </div>
+
+        <div class="col col2">
+          <p>
+            <strong>FORMATIONS</strong><br />
+            2023–2026 // DNMADe Graphisme – ELMAD Auguste Renoir (Paris)<br />
+            2020–2023 // Baccalauréat Arts Appliqués
+            <br /><br />
+
+            <strong>EXPÉRIENCES RÉCENTES</strong><br />
+            2025 // Stagiaire Direction Artistique – Hello Éditions<br />
+            2025 // Workshop Motion Design – After Effects<br />
+            2024 // Workshop HTML CSS JAVASCRIPT
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const somBtn = document.getElementById("sommaire-btn");
+        const somPanel = document.getElementById("sommaire-panel");
+        const somClose = document.getElementById("sommaire-close");
+
+        somBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          somPanel.classList.toggle("active");
+        });
+
+        somClose.addEventListener("click", function () {
+          somPanel.classList.remove("active");
+        });
+
+        const aproposBtn = document.getElementById("apropos-btn");
+        const aproposPanel = document.getElementById("apropos-panel");
+        const aproposClose = document.getElementById("apropos-close");
+
+        aproposBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+          aproposPanel.classList.toggle("active");
+        });
+
+        aproposClose.addEventListener("click", function () {
+          aproposPanel.classList.remove("active");
+        });
+      });
+    </script>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>
+        © Alissa Jock | Site codé à la main HTML-CSS | Typographie : Work Sans
+      </p>
+    </footer>
+  </body>
+</html>
